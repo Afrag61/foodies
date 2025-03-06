@@ -1,4 +1,4 @@
-class Printer {
+export class Printer {
   print(...values) {
     console.log(...values);
   }
