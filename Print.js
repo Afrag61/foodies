@@ -5,10 +5,10 @@ export class Printer {
 }
 
 export const print = (...args) => {
-  const j = new Printer();
+  const { print } = new Printer();
 
   if (args.length > 0) {
-    return j.print(...args);
+    return print(...args);
   }
 
   console.log("no data in params");
