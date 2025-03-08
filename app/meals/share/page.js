@@ -1,7 +1,6 @@
 import ImagePicker from "@/components/meals/Image-Picker";
 import styles from "./page.module.css";
-import { shareMeal } from "@/lib/actions";
-import MealsFormSubmit from "@/components/meals/meals-form-submit";
+import FormAction from "@/components/meals/form-Action";
 
 export default function ShareMealPage() {
   return (
@@ -13,7 +12,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={styles.main}>
-        <form className={styles.form} action={shareMeal}>
+        <FormAction>
           <div className={styles.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -42,10 +41,7 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <ImagePicker label="Your image" name="image" />
-          <p className={styles.actions}>
-            <MealsFormSubmit />
-          </p>
-        </form>
+        </FormAction>
       </main>
     </>
   );
